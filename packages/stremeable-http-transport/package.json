@@ -1,7 +1,7 @@
 {
-	"name": "open-source-stack",
-	"version": "1.1.2",
-	"description": "Minimal open-source stack to help you ship an open-source package in TS",
+	"name": "streameable-http-edge-transport",
+	"version": "0.0.1",
+	"description": ". Implements the MCP Streamable HTTP transport specification for web fetch-compatible environments.",
 	"main": "./dist/index.cjs",
 	"module": "./dist/index.js",
 	"types": "./dist/index.d.ts",
@@ -55,5 +55,8 @@
 		"tsdown": "^0.9.1",
 		"typescript": "^5.8.3",
 		"vitest": "^3.1.1"
+	},
+	"dependencies": {
+		"@modelcontextprotocol/sdk": "^1.12.1"
 	}
 }

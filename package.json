@@ -1,7 +1,7 @@
 {
-	"name": "open-source-stack",
+	"name": "streameable-http-edge-transport",
 	"version": "1.0.0",
-	"description": "Minimal open-source stack to help you ship an open-source package in TS",
+	"description": ". Implements the MCP Streamable HTTP transport specification for web fetch-compatible environments.",
 	"scripts": {
 		"build": "pnpm run --filter=\"./packages/**/*\" build",
 		"build:watch": "pnpm build && pnpm run --filter=\"./packages/**/*\" --parallel build --watch",
@@ -22,12 +22,12 @@
 	"license": "MIT",
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/forge-42/open-source-stack.git"
+		"url": "https://github.com/enZane/stream-http-edge-transport"
 	},
 	"bugs": {
-		"url": "https://github.com/forge-42/open-source-stack/issues"
+		"url": "https://github.com/enZane/stream-http-edge-transport/issues"
 	},
-	"homepage": "https://github.com/forge-42/open-source-stack#readme",
+	"homepage": "https://github.com/enZane/stream-http-edge-transport#readme",
 	"devDependencies": {
 		"@biomejs/biome": "^1.9.4",
 		"@changesets/cli": "^2.29.0",

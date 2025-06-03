@@ -3,7 +3,7 @@ name: Release
 on:
   push:
     branches:
-      - main
+      - main2 # Adjust this branch when you want to trigger the release
 
 jobs:
   release:
