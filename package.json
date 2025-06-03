@@ -18,7 +18,7 @@
 		"local-release": "changeset version && changeset publish",
 		"version": "changeset version"
 	},
-	"author": "forge-42",
+	"author": "enzane",
 	"license": "MIT",
 	"repository": {
 		"type": "git",

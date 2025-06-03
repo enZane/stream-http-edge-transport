@@ -32,17 +32,17 @@
 		"validate": "pnpm run check && pnpm run typecheck && pnpm run test",
 		"check:exports": "attw --pack ."
 	},
-	"author": "",
+	"author": "enzane",
 	"license": "MIT",
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/forge-42/open-source-stack.git"
+		"url": "git+https://github.com/enZane/stream-http-edge-transport.git"
 	},
 	"bugs": {
-		"url": "https://github.com/forge-42/open-source-stack/issues"
+		"url": "https://github.com/enZane/stream-http-edge-transport/issues"
 	},
 	"files": ["dist"],
-	"homepage": "https://github.com/forge-42/open-source-stack#readme",
+	"homepage": "https://github.com/enZane/stream-http-edge-transport#readme",
 	"publishConfig": {
 		"provenance": true
 	},
