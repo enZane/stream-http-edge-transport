@@ -1,59 +1,67 @@
-# Open-source stack
+# Streamable HTTP Transport for Web Fetch API
 
-![GitHub Repo stars](https://img.shields.io/github/stars/forge-42/open-source-stack?style=social)
-![npm](https://img.shields.io/npm/v/open-source-stack?style=plastic)
-![GitHub](https://img.shields.io/github/license/forge-42/open-source-stack?style=plastic)
-![npm](https://img.shields.io/npm/dy/open-source-stack?style=plastic)
-![npm](https://img.shields.io/npm/dw/open-source-stack?style=plastic)
-![GitHub top language](https://img.shields.io/github/languages/top/forge-42/open-source-stack?style=plastic)
+![GitHub Repo stars](https://img.shields.io/github/stars/enzane/stream-http-edge-transport?style=social)
+![npm](https://img.shields.io/npm/v/stremeable-http-transport?style=plastic) <!-- Consider if this should be the version of the main package or removed if multiple packages -->
+![GitHub](https://img.shields.io/github/license/enzane/stream-http-edge-transport?style=plastic)
+![GitHub top language](https://img.shields.io/github/languages/top/enzane/stream-http-edge-transport?style=plastic)
+<!-- Removed download stats as they are package-specific -->
 
-Full starter stack to develop CJS/ESM compatible npm packages with TypeScript, Vitest, Biome, Prettier, and GitHub Actions.
+This repository hosts `EdgeStreamableHTTPTransport`, an edge-compatible server transport for the Model Context Protocol (MCP). It enables real-time, bi-directional communication using Server-Sent Events (SSE) and standard HTTP requests, making it suitable for modern web frameworks like Hono. The transport is designed to implement the MCP Streamable HTTP transport specification and is optimized for edge environments.
 
-Detailed overview of the stack:
-https://youtu.be/ABRpwxLdGho
+## Overview
 
-Deploy your open-source project to npm with ease, with fully covered bundling, testing, linting and deployment setup out of the box,
-don't worry about CJS or ESM, bundling your typescript definitions or anything else, focus on coding out your solution and let the stack take care of the rest.
+The core of this project is to provide a reliable and efficient transport layer for applications requiring real-time data streaming, particularly those leveraging the Model Context Protocol. It's built with TypeScript and designed to be easily integrated into various server setups, especially those running on edge computing platforms.
 
-Build your own open-source project today! 🚀
+## Packages
 
-## Tools
+This monorepo contains the following primary package:
 
-- **TypeScript**: TypeScript is a typed superset of JavaScript that compiles to plain JavaScript.
-- **Vitest**: A modern test runner built on top of Vite.
-- **Biome**: Biome statically analyzes your code to find issues and formats your code with a consistent, opinionated style.
-- **GitHub Actions**: Automate your workflow from idea to production.
-- **tsdown** - Simple to config bundler powered by rolldown.
-- **Changeset** - A way to manage your versioning and changelog with a focus on monorepos.
-- **pnpm workspaces** - A way to manage multiple packages in a single repository.
+- **`packages/stremeable-http-transport`**:
+  - Implements the `EdgeStreamableHTTPTransport`.
+  - Supports SSE streaming and direct HTTP responses.
+  - Features session management (stateful and stateless modes).
+  - Includes resumability support via an extensible event store.
+  - For more details, see the [package README](./packages/stremeable-http-transport/README.md).
 
-## Features
+## Development
 
-- **ESM/CJS ready** - Write your code in TypeScript and publish it as ESM and CJS with 0 configuration.
-- **Are The types wrong? ready** - Passes all the checks for typings on https://arethetypeswrong.github.io/ by default.
-- **ESM/CJS test apps setup** - Test your package in both ESM and CJS environments already setup for you.
-- **Test runner setup** - Test your open source package with Vitest already setup for you.
-- **Linting setup** - Lint your code with Biome already setup for you.
-- **GitHub Actions setup** - Automate deployments to npm by using GitHub Actions.
-- **Changeset versioning & automation** - Automate releases with Changeset and GitHub Actions.
+This project utilizes a modern development stack to ensure code quality, maintainability, and ease of contribution.
 
-## Setup
+### Tools
 
-1. Use this template to create a new repository.
-2. Clone the repository.
-3. Change the package name in `package.json`.
-4. Change the `open-source-stack` dependency in your test-apps to your name
-5. Change the `open-source-stack` folder name in packages to your package name
-6. Install the dependencies with `npm install`.
-7. Change the `repository`, `bugs`, and `homepage` fields in `package.json` to your github repo.
-8. Change the license if required.
-9. Add the NPM_TOKEN secret to your GitHub repository.
-10. Allow GitHub Actions to create and approve pull requests. (Settings -> Actions -> Workflow permissions)
-11. Start coding!
+The development environment is configured with the following tools:
 
-## Scripts
+- **TypeScript**: For strong typing and modern JavaScript features.
+- **pnpm workspaces**: For managing the monorepo structure and dependencies.
+- **Vitest**: For fast and reliable unit and integration testing.
+- **Biome**: For consistent code formatting and linting.
+- **tsdown**: For efficient bundling of TypeScript code into CJS and ESM formats.
+- **Changeset**: For streamlined version management and changelog generation.
+- **GitHub Actions**: For automating CI/CD pipelines, including testing, building, and publishing.
+- **Lefthook**: For managing Git hooks.
 
-- `pnpm run build` - Build the package(s).
-- `pnpm run test` - Run the tests.
-- `pnpm run check` - Lint the code.
-- `pnpm run dev` - Start the package(s) and ESM/CJS test app in watch mode for development.
+### Key Scripts (run from the repository root)
+
+- `pnpm install`: Install dependencies for all packages.
+- `pnpm run build`: Build all packages.
+- `pnpm run test`: Run tests for all packages.
+- `pnpm run check`: Lint and format code across the repository.
+- `pnpm run dev`: Start the development environment, typically in watch mode for relevant packages.
+- `pnpm changeset`: To create a new changeset for versioning.
+- `pnpm changeset version`: To apply changesets and update package versions.
+
+Please refer to the `package.json` in the root and within each package for more specific scripts.
+
+## Contributing
+
+Contributions are welcome! Please read the [CONTRIBUTING.md](./CONTRIBUTING.md) guide for details on how to contribute to this project, including information on reporting bugs, proposing features, and submitting pull requests.
+
+Also, please adhere to our [CODE_OF_CONDUCT.md](./CODE_OF_CONDUCT.md).
+
+## Security
+
+For security vulnerabilities, please refer to our [SECURITY.MD](./SECURITY.MD) policy.
+
+## License
+
+This project is licensed under the terms of the [LICENSE](./LICENSE) file.

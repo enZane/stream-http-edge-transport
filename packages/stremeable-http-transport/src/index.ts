@@ -770,3 +770,15 @@ export class EdgeStreamableHTTPTransport implements Transport {
 		}
 	}
 }
+
+/**
+ * JSON-RPC error codes as per the JSON-RPC 2.0 specification
+ * https://www.jsonrpc.org/specification#error_object
+ */
+export const JSON_RPC_ERROR_CODES = {
+	PARSE_ERROR: -32700,
+	INVALID_REQUEST: -32600,
+	METHOD_NOT_FOUND: -32601,
+	INVALID_PARAMS: -32602,
+	INTERNAL_ERROR: -32603,
+} as const
